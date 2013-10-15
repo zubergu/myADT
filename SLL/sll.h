@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /******************
  * 
  * STRUCTURES AND TYPEDEFS
@@ -37,15 +38,17 @@ Bool add_at_begin(Head *list);
 
 Bool add_at_end(Head *list);
 
-Bool add_at_order();
+Bool add_at_order(Head *list);
 
-Bool remove_node();
+Bool remove_node(Head *list);
 
-Bool reverse_list();
+Bool reverse_list(Head *list);
 
-Bool sort_list();
+Bool sort_list(Head * list);
 
 Bool print_list(const Head *list);
+
+Bool count_nodes(const Head *list);
 
 Bool remove_list();
 

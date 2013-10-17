@@ -31,7 +31,7 @@ Bool create_list(Head **list_ptr)
   
   if(*list_ptr!=NULL)
   {
-    /*remove previous list */
+    remove_list(list_ptr);
   }
   if((*list_ptr=malloc(sizeof(Head)))==NULL)
   {
@@ -338,6 +338,33 @@ Bool count_nodes(const Head * list)
 }
 
 
-
+/*
+ * 
+ * Remove nodes and head. Free all memory
+ * 
+ */
+Bool remove_list(Head **list_ptr)
+{
+  if(*list_ptr==NULL)
+  {
+    printf("No list created yet.\n");
+    return FALSE;
+  }
+  
+  Node * to_free;
+  Node * curr;
+  
+  to_free=*list_ptr;
+  do
+  {
+  curr=to_free->next;
+  free(to_free);
+  to_free=curr;
+  } while (to_free!=NULL);
+  *list_ptr=NULL;
+  return TRUE;
+}
+  
+  
 
 

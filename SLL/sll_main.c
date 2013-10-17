@@ -23,13 +23,12 @@ int main(void)
       case 6: printf("Reversing list %s.\n", reverse_list(list)==TRUE? "succeeded":"failed"); break;
       case 7: printf("Sorting list %s.\n", sort_list(list)==TRUE? "succeeded":"failed"); break;
       case 8: printf("Printing all nodes in list %s.\n", print_list(list)==TRUE? "succeeded":"failed");break;
-      case 9: break;
+      case 9: printf("Removing list %s.\n", remove_list(&list)==TRUE? "succeeded":"failed");break;
       case 10:printf("Function checking number of nodes %s.\n", count_nodes(list)==TRUE? "succeeded":"failed"); break;
       default: printf("This should never happen.\n"); break;
     }
   }
-  printf("And here user chose to quit\n");
-  
+  printf("Freeing memory %s.\n", remove_list(&list)==TRUE? "succeeded":"failed");
   return 0;
 }
 

@@ -50,6 +50,6 @@ Bool print_list(const Head *list);
 
 Bool count_nodes(const Head *list);
 
-Bool remove_list();
+Bool remove_list(Head **list_ptr);
 
 #endif
